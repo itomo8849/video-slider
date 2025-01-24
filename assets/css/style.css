@@ -11,6 +11,10 @@ body {
   font-weight: 300;
 }
 
+video {
+  max-width: 100%;
+}
+
 .ly_cont {
   width: min(1200px, 96%);
   padding-left: 40px;
@@ -62,4 +66,9 @@ body {
   left: 0;
   transform: translate(-40px, -50%);
   writing-mode: vertical-lr;
+}
+
+.swiper {
+  max-width: 640px;
+  margin-inline: auto;
 }
