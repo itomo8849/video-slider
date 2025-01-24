@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "M PLUS 1 Code", monospace;
+  font-weight: 300;
+}
+
+.ly_cont {
+  width: min(1200px, 96%);
+  padding-left: 40px;
+  margin-inline: auto;
+}
+
+.ly_contWide {
+  width: 96%;
+  margin-inline: auto;
+}
+
+.ly_header {
+  display: grid;
+  height: 80vh;
+}
+
+.el_lv1Heading {
+  place-self: center left;
+  font-size: 80px;
+  font-weight: 300;
+}
+
+.el_lv2Heading {
+  color: #777;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.el_lv3Heading_wrapper {
+  overflow: hidden;
+}
+
+.el_lv3Heading {
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.bl_sect {
+  position: relative;
+  padding-block: 56px 80px;
+  border-top: 1px solid #666;
+}
+
+.bl_sectTtl {
+  position: sticky;
+  top: 50%;
+  left: 0;
+  transform: translate(-40px, -50%);
+  writing-mode: vertical-lr;
+}
