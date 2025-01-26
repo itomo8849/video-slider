@@ -9,12 +9,21 @@ function controlVideos(swiper) {
   // アクティブスライド内の動画を再生
   const activeSlide = swiper.slides[swiper.activeIndex];
   const videos = activeSlide.querySelectorAll('video');
-  videos.forEach((video) => video.play());
+  videos.forEach((video) => {
+    if (video.paused) {
+      video.play().catch((error) => {
+        console.warn('Video play was interrupted:', error);
+      });
+    }
+  });
 }
 
 // 動画が1つのみのスライダー
 const singleVideoSlider = new Swiper('.js_singleVideoSlider', {
   loop: true,
+  slidesPerView: 1.2,
+  centeredSlides: true,
+  spaceBetween: 8,
   autoplay: {
     delay: 8000,
   },
@@ -34,6 +43,9 @@ controlVideos(singleVideoSlider); // 初期表示時の動画再生
 // 動画が2つのスライダー
 const multipleVideoSlider = new Swiper('.js_multipleVideoSlider', {
   loop: true,
+  slidesPerView: 1.2,
+  centeredSlides: true,
+  spaceBetween: 8,
   autoplay: {
     delay: 8000,
   },
