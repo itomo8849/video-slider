@@ -68,7 +68,46 @@ video {
   writing-mode: vertical-lr;
 }
 
-.swiper {
+.bl_swiperUnit{
+  --swiper-navigation-sides-offset: -48px; /* ナビゲーションボタンの位置 */
+  --_paginationGap: 24px;
+  position: relative;
   max-width: 640px;
   margin-inline: auto;
+}
+
+.swiper{
+  padding-bottom: var(--_paginationGap);
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  top: calc((100% - var(--_paginationGap)) / 2);
+  width: auto;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+  color: #777;
+  font-family: inherit;
+  font-size: 32px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after{
+  content: "<-";
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after{
+  content: "->";
+}
+
+.swiper-pagination-bullet{
+  width: 24px;
+  height: 3px;
+  background: #333;
+  border-radius: 0;
 }
